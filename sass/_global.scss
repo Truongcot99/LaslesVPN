@@ -1,0 +1,112 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    color: $text-color;
+    font-family: $font-family;
+    line-height: 1;
+}
+
+#main {
+    position: relative;
+}
+
+strong {
+    font-weight: 500;
+}
+
+.btn {
+    position: relative;
+    display: inline-block;
+    white-space: nowrap;
+    text-align: center;
+    padding: 13px 45px;
+    border-radius: 100rem;
+    cursor: pointer;
+    outline: none;
+    font-family: $font-family;
+    font-size: 1.6rem;
+    color: $text-color;
+    line-height: 1;
+    border: none;
+    background-color: transparent;
+
+    @include breakpoint-down(lg) {
+        padding: 8px 28px;
+    }
+
+    &--primary {
+        position: relative;
+        background-color: $primary-color;
+        color: white;
+        font-weight: 700;
+        padding: 18px 78px;
+        border-radius: 10px;
+        transition: all 0.2s linear;
+
+            &::after {
+                position: absolute;
+                content: "";
+                background: rgba(245, 56, 56, 0.35);
+                filter: blur(54px);
+                border-radius: 10px;
+                width: 90%;
+                height: 100%;
+                top: 0;
+                left: 50%;
+                transform: translate(-50%, 50%);
+                z-index: -1;
+            }
+
+        &:hover {
+            color: white;
+        }
+    }
+
+    &--outline {
+        border: 1px solid $primary-color;
+        background-color: white;
+        color: $primary-color;
+
+        &:hover {
+            background-color: $primary-color;
+            color: white;
+            
+        }
+    }
+}
+.text {
+    line-height: 30px;
+
+    &-medium {
+        font-weight: 500;
+        line-height: 30px;
+
+    }
+
+    &-small {
+        font-size: 1.4rem;
+        line-height: 30px;
+    }
+}
+
+.heading {
+    font-size: 3.5rem;
+    line-height: 50px;
+    color: $heading-color;
+    font-weight: 500;
+    margin-bottom: 20px;
+
+    @include breakpoint-down(lg) {
+        font-size: 2.8rem;
+        line-height: 40px;
+    }
+}
+.heading-small {
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 30px;
+    color: $heading-color;
+}

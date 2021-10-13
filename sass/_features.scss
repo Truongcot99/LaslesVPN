@@ -1,0 +1,38 @@
+.features {
+    padding-bottom: 130px;
+
+    @include breakpoint-down(lg) {
+        padding-bottom: 80px;
+    }
+    
+    &-container {
+        padding-left: 34.5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        gap: 0 76px;
+
+        @include breakpoint-down(md) {
+            flex-direction: column-reverse;
+        }
+    }
+
+    &-img {
+        width: 100%;
+    }
+
+    &-desc {
+        margin-bottom: 20px;
+    }
+
+    &-list {
+        list-style: none;
+    }
+    
+    &-item {
+        display: flex;
+        align-items: center;
+        gap: 0 10px;
+        margin-bottom: 15px;
+    }
+}

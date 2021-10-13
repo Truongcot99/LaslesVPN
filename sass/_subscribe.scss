@@ -1,0 +1,51 @@
+.subscribe {
+    border-radius: 10px;
+    
+    &-container {
+        position: relative;
+        z-index: 10;
+        transform: translateY(50%);
+        background-color: white;
+        padding: 58.5px 70px; 
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0 340px;
+        border-radius: 10px;
+        box-shadow: 0 30px 114px 0 rgba(#0d1025, 0.06);
+
+       @include breakpoint-down(xl) {
+           padding: 40px 50px;
+       } 
+
+        @include breakpoint-down(lg) {
+            gap: 0 40px;
+            padding: 30px 50px;
+        }
+
+        @include breakpoint-down(md) {
+            flex-direction: column;
+            padding: 30px 15px;
+        }
+    }
+
+    &-left {
+        max-width: 410px;
+
+        @include breakpoint-down(md) {
+            text-align: center;
+        }
+    }
+
+    &-desc {
+        @include breakpoint-down(md) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &-btn {
+        padding: 17.5px 65px;
+    }
+
+
+}

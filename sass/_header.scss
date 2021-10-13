@@ -1,0 +1,139 @@
+.header {
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 88px;
+
+    @include breakpoint-down(md) {
+        padding-top: 30px;
+        height: 60px;
+    }
+
+    &-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .active.menu {
+        transform: translateX(0);
+    }
+
+    .menu {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        transition: all 0.3s linear;
+
+        @include breakpoint-down(lg) {
+            padding: 80px 0 80px 36px;
+            display: block;
+            position: fixed;
+            width: 50vw;
+            height: 100vh;
+            background-color: white;
+            left: 0;
+            top: 0;
+            z-index: 20;
+            transform: translateX(-100%);
+        }
+
+        @include breakpoint-down(md) {
+            width: 100vw;
+        }
+
+        &-item {
+
+            @include breakpoint-down(lg) {
+                padding: 16px 0;
+            }
+            &:not(:first-child) {
+                margin-left: 40px;
+
+                @include breakpoint-down(xl) {
+                    margin-left: 30px;
+                }
+
+                @include breakpoint-down(lg) {
+                    margin-left: 0;
+                }
+            }
+
+            &:last-child {
+                margin-left: 150px;
+
+                @include breakpoint-down(xl) {
+                    margin-left: 60px;
+                }
+
+                @include breakpoint-down(lg) {
+                    margin-left: 0;
+                }
+            }
+
+            &--auth {
+                display: flex;
+                align-items: center;
+                gap: 0 30px;
+                text-transform: capitalize;
+
+                @include breakpoint-down(lg) {
+                    gap: 0 60px;
+                }
+            }
+
+            &--close {
+                position: absolute;
+                top: 0;
+                right: 20px;
+                display: none;
+                color: $primary-color;
+
+                i {
+                    font-size: 4rem;
+                }
+
+                @include breakpoint-down(lg) {
+                    display: block;
+                }
+            }
+        }
+
+        &-link {
+            color: $text-color;
+            line-height: 19px;
+
+            &:hover {
+                color: $primary-color;
+            }
+        }
+    }
+
+
+    &-signin {
+        color: $text-color;
+        &:hover {
+            color: $primary-color;
+        }
+    }
+
+    &-toggle {
+        width: 30px;
+        height: 20px;
+        display: none;
+
+        @include breakpoint-down(lg) {
+            display: block;
+        }
+        span {
+            display: block;
+            content: "";
+            height: 3px;
+            width: 100%;
+            background-color: $heading-color;
+            margin-bottom: 6px;
+        }
+    }
+
+}

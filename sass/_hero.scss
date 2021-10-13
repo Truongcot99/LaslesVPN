@@ -1,0 +1,48 @@
+.hero {
+    padding-bottom: 103px;
+
+    @include breakpoint-down(lg) {
+        padding-bottom: 80px;
+    }
+    
+    &-container {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0 40px;
+
+        @include breakpoint-down(lg) {
+            flex-direction: column-reverse;
+        }
+    }
+
+    &-content {
+        max-width: 555px;
+    }
+    &-heading {
+        margin-bottom: 20px;
+        font-size: 50px;
+        line-height: 70px;
+        font-weight: 500;
+        color: $heading-color;
+
+        @include breakpoint-down(lg) {
+            font-size: 36px;
+            line-height: 50px;
+        }
+        strong {
+            font-weight: 700;
+        }
+    }
+    
+    &-desc {
+        margin-bottom: 50px;
+    }
+
+    &-img {
+        @include breakpoint-down(lg) {
+            margin-bottom: 16px;
+        }
+    }
+}

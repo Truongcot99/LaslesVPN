@@ -1,0 +1,130 @@
+.customer {
+
+    &-header {
+        max-width: 555px;
+        margin: 0 auto;
+        margin-bottom: 60px;
+        text-align: center;
+    }
+
+    &-heading {
+        max-width: 448px;
+        margin:  0 auto;
+    }
+
+    &-list {
+        position: relative;
+    }
+
+    &-item {
+        padding: 20px;
+        border: 2px solid #DDDDDD;
+        border-radius: 10px;
+        margin: 0 10px;
+        min-height: 200px;
+        transition: all 0.2s linear;
+    }
+
+    &-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 13px;
+    }
+
+    &-info {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    &-avatar {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    }
+
+    &-name,
+    &-address {
+        line-height: 1;
+    }
+
+    &-name {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 30px;
+        color: $heading-color;
+    }
+
+    &-rating {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    &-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        border-radius: 50%;
+        border: 1px solid $primary-color;
+        color: $primary-color;
+        position: absolute;
+        transform: translateY(50%);
+        bottom: 0;
+        right: 0;
+        z-index: 10;
+
+        &:hover {
+            background-color: $primary-color;
+            color: white;
+        }
+    }
+
+    .icon-prev {
+        right: 80px;
+    }
+
+    .slick-track {
+        display: flex;
+        margin-bottom: 60px;
+    }
+
+    .slick-current.customer-item{
+        border: 2px solid $primary-color;
+    }
+
+    .slick-dots {
+        list-style: none;
+        display: flex !important;
+        gap: 0 15px;
+        transform: translateY(50%);
+        button {
+            width: 15px;
+            height: 15px;
+            border-radius: 100rem;
+            background-color: transparent;
+            background-color: #DDE0E4;
+            color: transparent;
+            outline: none;
+            border: none;
+            transform-origin: left;
+            transition: width 0.2s linear;
+        }
+
+        .slick-active {
+            button {
+                width: 45px;
+                background-color: $primary-color;
+            }
+        }
+    }
+
+    // .customer-item .slick-active:last-child {
+    //     margin: 0;
+    // }
+}
